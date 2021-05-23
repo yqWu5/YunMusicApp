@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/MusicComment_ViewPager_Img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/MusicComment_ViewPager_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Dest1nyW"
+        app:layout_constraintStart_toEndOf="@+id/MusicComment_ViewPager_Img"
+        app:layout_constraintTop_toTopOf="@+id/MusicComment_ViewPager_Img" />
+
+    <TextView
+        android:id="@+id/MusicComment_ViewPager_Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="2014年12月07日"
+        app:layout_constraintStart_toStartOf="@+id/MusicComment_ViewPager_Name"
+        app:layout_constraintTop_toBottomOf="@+id/MusicComment_ViewPager_Name" />
+
+    <TextView
+        android:id="@+id/MusicComment_ViewPager_LikeCount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/MusicComment_ViewPager_Time"
+        app:layout_constraintEnd_toStartOf="@+id/MusicComment_ViewPager_LikeImg" />
+
+    <TextView
+        android:id="@+id/MusicComment_ViewPager_Comment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/MusicComment_ViewPager_LikeCount"
+        app:layout_constraintStart_toStartOf="@+id/MusicComment_ViewPager_Time"
+        app:layout_constraintTop_toBottomOf="@+id/MusicComment_ViewPager_Img" />
+
+    <TextView
+        android:textColor="@color/red"
+        android:id="@+id/MusicComment_ViewPager_Followed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="462条回复 >"
+        app:layout_constraintStart_toStartOf="@+id/MusicComment_ViewPager_Comment"
+        app:layout_constraintTop_toBottomOf="@+id/MusicComment_ViewPager_Comment" />
+
+    <com.like.LikeButton
+        android:id="@+id/MusicComment_ViewPager_LikeImg"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="3dp"
+        app:icon_size="25dp"
+        app:icon_type="Thumb"
+        app:layout_constraintBottom_toBottomOf="@+id/MusicComment_ViewPager_LikeCount"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/MusicComment_ViewPager_LikeImg"
+        app:layout_constraintStart_toStartOf="@+id/MusicComment_ViewPager_Followed"
+        app:layout_constraintTop_toBottomOf="@+id/MusicComment_ViewPager_Followed">
+    </View>
+</androidx.constraintlayout.widget.ConstraintLayout>

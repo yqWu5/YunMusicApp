@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/CloudVillage_Square"
+    android:layout_margin="5dp"
+    android:background="@drawable/cicle_bg"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/Square_Recycler_Img"
+        android:layout_width="150dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:lines="2"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:id="@+id/Square_Recycler_Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="林俊杰《最好是》官方MV"
+        app:layout_constraintEnd_toEndOf="@+id/Square_Recycler_Img"
+        app:layout_constraintStart_toStartOf="@+id/Square_Recycler_Img"
+        app:layout_constraintTop_toBottomOf="@+id/Square_Recycler_Img" />
+
+    <ImageView
+        android:id="@+id/imageView55"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="5dp"
+        android:src="@mipmap/play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Square_Recycler_Title"
+        app:layout_constraintTop_toBottomOf="@+id/Square_Recycler_Title" />
+
+    <TextView
+        android:id="@+id/Square_Recycler_People"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="100万"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView55"
+        app:layout_constraintStart_toEndOf="@+id/imageView55"
+        app:layout_constraintTop_toTopOf="@+id/imageView55" />
+
+    <com.like.LikeButton
+        android:id="@+id/Square_Recycler_LikeImg"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="2dp"
+        android:src="@mipmap/like"
+        app:icon_type="Heart"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView55"
+        app:layout_constraintEnd_toStartOf="@+id/Square_Recycler_Likes"
+        app:layout_constraintTop_toTopOf="@+id/imageView55"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/Square_Recycler_Likes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="1万"
+        app:layout_constraintBottom_toBottomOf="@+id/Square_Recycler_LikeImg"
+        app:layout_constraintEnd_toEndOf="@+id/Square_Recycler_Title"
+        app:layout_constraintTop_toTopOf="@+id/Square_Recycler_LikeImg" />
+
+    <ImageView
+        android:id="@+id/Square_Recycler_UserImg"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Square_Recycler_Img"
+        app:layout_constraintStart_toStartOf="@+id/Square_Recycler_Img"
+        tools:srcCompat="@tools:sample/avatars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

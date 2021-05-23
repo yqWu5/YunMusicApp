@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gavin.view.flexible.FlexibleLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/FlexibleLayout_All"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SingerDetailActivity">
+    <ScrollView
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:id="@+id/FlexibleLayout_ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/SingerDetail_About"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/cicle_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SingerDetail_Img">
+
+                <TextView
+                    android:id="@+id/SingerDetail_Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="林俊杰" />
+
+                <TextView
+                    android:id="@+id/textView75"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="508.3万 粉丝"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/SingerDetail_Name"
+                    app:layout_constraintStart_toStartOf="@+id/SingerDetail_Name"
+                    app:layout_constraintTop_toBottomOf="@+id/SingerDetail_Name" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/SingerDetail_Img"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/jjlin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/SingerDetail_Back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/musicappback"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/SingerDetail_Setting"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@mipmap/playmusic_setting"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.tabs.TabLayout
+                app:tabSelectedTextColor="@color/black"
+                app:tabIndicatorColor="#FF0000"
+                app:tabIndicator="@drawable/layer_tab_indicator_large"
+                android:id="@+id/SingerDetail_TabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SingerDetail_About">
+            </com.google.android.material.tabs.TabLayout>
+
+            <com.example.yunmusicapp.mineView.CustomViewPager
+                android:id="@+id/SingerDetail_ViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SingerDetail_TabLayout">
+            </com.example.yunmusicapp.mineView.CustomViewPager>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</com.gavin.view.flexible.FlexibleLayout>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bg"
+    android:fitsSystemWindows="true"
+    android:id="@+id/PlayMusic_Background"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayMusicActivity">
+
+
+    <me.zhengken.lyricview.LyricView
+        android:id="@+id/PlayMusic_lrcView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="70dp"
+        app:fadeInFadeOut="true"
+        app:highlightColor="@color/red"
+        app:hint="暂无歌词"
+        app:hintColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/PlayMusic_DownLoad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PlayMusic_Title"
+        app:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/PlayMusic_Down"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/playmusic_down"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textSize="20sp"
+        android:id="@+id/PlayMusic_Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="TextView"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/PlayMusic_Down"
+        app:layout_constraintEnd_toStartOf="@+id/PlayMusic_Share"
+        app:layout_constraintStart_toEndOf="@+id/PlayMusic_Down"
+        app:layout_constraintTop_toTopOf="@+id/PlayMusic_Down" />
+
+    <ImageView
+        android:id="@+id/PlayMusic_Share"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:src="@mipmap/playmusic_share"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/PlayMusic_SeekBar"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:maxHeight="2dp"
+        android:progress="0"
+        app:layout_constraintBottom_toBottomOf="@+id/PlayMusic_StartTime"
+        app:layout_constraintEnd_toStartOf="@+id/PlayMusic_EndTime"
+        app:layout_constraintStart_toEndOf="@+id/PlayMusic_StartTime" />
+
+    <ImageView
+        android:id="@+id/PlayMusic_Img"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@mipmap/playmusic_setting"
+        app:layout_constraintBottom_toTopOf="@+id/PlayMusic_DownLoad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PlayMusic_Title" />
+
+    <ImageView
+        android:id="@+id/imageView38"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="30dp"
+        android:src="@mipmap/playmusic_sync"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/PlayMusic_PlayList"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="30dp"
+        android:src="@mipmap/playmusic_playlist"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView38"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView40"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="40dp"
+        android:src="@mipmap/playmusic_prev"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView38"
+        app:layout_constraintStart_toEndOf="@+id/imageView38" />
+
+    <ImageView
+        android:id="@+id/imageView41"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="40dp"
+        android:src="@mipmap/playmusic_next"
+        app:layout_constraintBottom_toBottomOf="@+id/PlayMusic_PlayList"
+        app:layout_constraintEnd_toStartOf="@+id/PlayMusic_PlayList" />
+
+    <ImageView
+        android:background="#00000000"
+        android:id="@+id/PlayMusic_State"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/playmusic_play"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView40"
+        app:layout_constraintEnd_toStartOf="@+id/imageView41"
+        app:layout_constraintStart_toEndOf="@+id/imageView40"
+        app:layout_constraintTop_toTopOf="@+id/imageView40" />
+
+    <TextView
+        android:id="@+id/PlayMusic_StartTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/imageView38"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/PlayMusic_EndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/PlayMusic_PlayList"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/PlayMusic_Like"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="20dp"
+        android:src="@mipmap/playmusic_like"
+        app:layout_constraintBottom_toTopOf="@+id/PlayMusic_SeekBar"
+        app:layout_constraintStart_toStartOf="@+id/imageView38" />
+
+    <ImageView
+        android:id="@+id/PlayMusic_DownLoad"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="50dp"
+        android:src="@mipmap/playmusic_download"
+        app:layout_constraintBottom_toBottomOf="@+id/PlayMusic_Like"
+        app:layout_constraintStart_toEndOf="@+id/PlayMusic_Like" />
+
+    <ImageView
+        android:id="@+id/PlayMusic_Setting"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/playmusic_setting"
+        app:layout_constraintBottom_toBottomOf="@+id/PlayMusic_DownLoad"
+        app:layout_constraintEnd_toEndOf="@+id/PlayMusic_PlayList" />
+
+    <ImageView
+        android:id="@+id/PlayMusic_Chat"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="50dp"
+        android:src="@mipmap/playmusic_chat"
+        app:layout_constraintBottom_toBottomOf="@+id/PlayMusic_Setting"
+        app:layout_constraintEnd_toStartOf="@+id/PlayMusic_Setting" />
+
+    <TextView
+        android:id="@+id/textView71"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="20dp"
+        android:text="999+"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/PlayMusic_Chat"
+        app:layout_constraintEnd_toStartOf="@+id/PlayMusic_Setting" />
+
+    <TextView
+        android:id="@+id/PlayMusic_showImg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/PlayMusic_DownLoad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PlayMusic_Title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

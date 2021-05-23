@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:clipChildren="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/Main_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:background="@color/white"
+            android:clipChildren="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/Main_showMore"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#00000000"
+                    android:src="@mipmap/menu" />
+                <EditText
+                    android:theme="@style/EditTextSearch"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textCursorDrawable="@color/black"
+                    android:textColor="@color/black"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:id="@+id/Main_Edit"
+                    android:layout_margin="7dp"
+                    android:background="@drawable/cicle_bg_none"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </EditText>
+                <ImageView
+                    android:id="@+id/Main_Search"
+                    android:layout_margin="10dp"
+                    android:src="@mipmap/search_black"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp">
+                </ImageView>
+            </LinearLayout>
+            <com.example.yunmusicapp.mineView.VerticalScrollView
+                android:scrollbars="none"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:fillViewport="true"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="0dp">
+                    <com.example.yunmusicapp.mineView.VerticalViewPager
+                        android:id="@+id/Main_ViewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </com.example.yunmusicapp.mineView.VerticalScrollView>
+            <com.google.android.material.tabs.TabLayout
+                android:background="@color/white"
+                app:tabRippleColor = "@android:color/transparent"
+                app:tabSelectedTextColor="@color/black"
+                app:tabIndicatorColor="#FF0000"
+                app:tabIndicator="@drawable/layer_tab_indicator"
+                android:id="@+id/Main_TabLayout"
+                
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="bottom"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorHeight="4dp" />
+        </LinearLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:backgroundTint="@color/bg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/white"
+            android:fitsSystemWindows="true">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:id="@+id/MainMenu_img"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@mipmap/songdetail_share"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp">
+                    </ImageView>
+                    <TextView
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="6"
+                        android:id="@+id/MainMenu_Name"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        tools:text="Dest1nyW"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <ImageView
+                        android:layout_marginEnd="10dp"
+                        android:background="#00000000"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:src="@mipmap/menu_photo"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp">
+                    </ImageView>
+                </LinearLayout>
+
+                <com.example.yunmusicapp.mineView.VerticalScrollView
+                    android:layout_marginBottom="10dp"
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <com.example.yunmusicapp.mineView.VerticalViewPager
+                        android:id="@+id/Main_Menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </com.example.yunmusicapp.mineView.VerticalViewPager>
+                </com.example.yunmusicapp.mineView.VerticalScrollView>
+            </LinearLayout>
+
+        </com.google.android.material.navigation.NavigationView>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

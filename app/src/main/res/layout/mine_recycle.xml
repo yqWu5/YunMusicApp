@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="#F5F5F5"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/Mine_Img"
+            android:src="@mipmap/test"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/Mine_Name"
+            android:textStyle="bold"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="DestinyW"
+            app:layout_constraintStart_toEndOf="@+id/Mine_Img"
+            app:layout_constraintTop_toTopOf="@+id/Mine_Img" />
+
+        <TextView
+            android:id="@+id/Mine_Lv"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:background="@drawable/cicle_bg"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lv6"
+            app:layout_constraintBottom_toBottomOf="@+id/Mine_Img"
+            app:layout_constraintStart_toStartOf="@+id/Mine_Name" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Mine_MusicApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/cicle_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Mine_Lv" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Mine_LikeMusic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/cicle_bg"
+            app:layout_constraintEnd_toEndOf="@+id/Mine_MusicApp"
+            app:layout_constraintStart_toStartOf="@+id/Mine_MusicApp"
+            app:layout_constraintTop_toBottomOf="@+id/Mine_MusicApp" />
+
+        <com.google.android.material.tabs.TabLayout
+            app:tabRippleColor = "@android:color/transparent"
+            android:background="#00000000"
+            app:tabSelectedTextColor="@color/black"
+            app:tabIndicatorColor="#FF0000"
+            app:tabIndicator="@drawable/layer_tab_indicator_large"
+            android:id="@+id/Mine_TabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Mine_LikeMusic"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorHeight="4dp" />
+
+        <com.example.yunmusicapp.mineView.CustomViewPager
+            android:id="@+id/Mine_ViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/cicle_bg"
+            app:layout_constraintEnd_toEndOf="@+id/Mine_TabLayout"
+            app:layout_constraintStart_toStartOf="@+id/Mine_TabLayout"
+            app:layout_constraintTop_toBottomOf="@+id/Mine_TabLayout" />
+
+        <ImageView
+            android:id="@+id/Mine_More"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="#00000000"
+            android:src="@mipmap/minemore"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/Mine_MusicApp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="5dp"
+    android:background="@drawable/cicle_bg"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/CloudVillage_Mv_Img"
+        android:layout_width="150dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:lines="2"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:id="@+id/CloudVillage_Mv_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="林俊杰《最好是》官方MV"
+        app:layout_constraintStart_toStartOf="@+id/CloudVillage_Mv_Img"
+        app:layout_constraintTop_toBottomOf="@+id/CloudVillage_Mv_Img" />
+
+    <ImageView
+        android:id="@+id/imageView54"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="5dp"
+        android:src="@mipmap/play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/CloudVillage_Mv_Title"
+        app:layout_constraintTop_toBottomOf="@+id/CloudVillage_Mv_Title" />
+
+    <TextView
+        android:id="@+id/CloudVillage_Mv_People"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="10万"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView54"
+        app:layout_constraintStart_toEndOf="@+id/imageView54"
+        app:layout_constraintTop_toTopOf="@+id/imageView54" />
+
+    <ImageView
+        android:id="@+id/imageView57"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@mipmap/like"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView54"
+        app:layout_constraintEnd_toStartOf="@+id/CloudVillage_Mv_Likes"
+        app:layout_constraintTop_toTopOf="@+id/imageView54" />
+
+    <TextView
+        android:id="@+id/CloudVillage_Mv_Likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10万"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView57"
+        app:layout_constraintEnd_toEndOf="@+id/CloudVillage_Mv_Img"
+        app:layout_constraintTop_toTopOf="@+id/imageView57" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

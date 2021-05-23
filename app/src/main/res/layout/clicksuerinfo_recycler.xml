@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:background="#F5F5F5"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ClickUserInfo_Recycler_Img"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ClickUserInfo_Recycler_Img"
+        app:layout_constraintTop_toTopOf="@+id/ClickUserInfo_Recycler_Img">
+
+        <TextView
+            android:id="@+id/ClickUserInfo_Fans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="粉丝"
+            app:layout_constraintBottom_toTopOf="@+id/textView43"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cicle_bg_none"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="互相关注"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:id="@+id/ClickUserInfo_FansTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="2"
+            app:layout_constraintBottom_toTopOf="@+id/ClickUserInfo_Fans"
+            app:layout_constraintEnd_toEndOf="@+id/ClickUserInfo_Fans"
+            app:layout_constraintStart_toStartOf="@+id/ClickUserInfo_Fans" />
+
+        <TextView
+            android:id="@+id/ClickUserInfo_Care"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关注"
+            app:layout_constraintBottom_toBottomOf="@+id/ClickUserInfo_Fans"
+            app:layout_constraintEnd_toStartOf="@+id/textView47"
+            app:layout_constraintStart_toEndOf="@+id/ClickUserInfo_Fans" />
+
+        <TextView
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:id="@+id/ClickUserInfo_CareTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="5"
+            app:layout_constraintBottom_toTopOf="@+id/ClickUserInfo_Care"
+            app:layout_constraintEnd_toEndOf="@+id/ClickUserInfo_Care"
+            app:layout_constraintStart_toStartOf="@+id/ClickUserInfo_Care" />
+
+        <TextView
+            android:id="@+id/textView47"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:text="等级"
+            app:layout_constraintBottom_toBottomOf="@+id/ClickUserInfo_Care"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:id="@+id/ClickUserInfo_Lv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Lv.6"
+            app:layout_constraintBottom_toTopOf="@+id/textView47"
+            app:layout_constraintEnd_toEndOf="@+id/textView47"
+            app:layout_constraintStart_toStartOf="@+id/textView47" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/ClickUserInfo_Recycler_TabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:background="#00000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout11"
+        app:tabIndicator="@drawable/layer_tab_indicator"
+        app:tabIndicatorColor="#FF0000"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabSelectedTextColor="@color/black" />
+
+    <com.example.yunmusicapp.mineView.VerticalScrollView
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ClickUserInfo_Recycler_TabLayout">
+        <com.example.yunmusicapp.mineView.VerticalViewPager
+            android:id="@+id/ClickUserInfo_ViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.example.yunmusicapp.mineView.VerticalViewPager>
+    </com.example.yunmusicapp.mineView.VerticalScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

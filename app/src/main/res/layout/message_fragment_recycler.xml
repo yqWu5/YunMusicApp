@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/Message_Recycler_Img"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@mipmap/message_newsong" />
+
+    <TextView
+        android:id="@+id/Message_Recycler_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="云音乐VIP"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@+id/Message_Recycler_Img"
+        app:layout_constraintTop_toTopOf="@+id/Message_Recycler_Img" />
+
+    <TextView
+        android:lines="1"
+        android:maxLines="1"
+        android:maxLength="22"
+        android:ellipsize="end"
+        android:id="@+id/Message_Recycler_Copment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="会员尊享权益--礼品卡已发放到您的账号。..."
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Message_Recycler_Img"
+        app:layout_constraintStart_toStartOf="@+id/Message_Recycler_Name" />
+
+    <TextView
+        android:textSize="11sp"
+        android:id="@+id/Message_Recycler_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="5月1日"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Message_Recycler_Name" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Message_Recycler_Img" />
+</androidx.constraintlayout.widget.ConstraintLayout>

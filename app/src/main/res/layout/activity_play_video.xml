@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/black"
+    android:id="@+id/PlayVideo"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayVideoActivity">
+
+    <cn.jzvd.JzvdStd
+        android:id="@+id/PlayVideo_Media"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PlayVideo_Back" />
+
+    <ImageView
+        android:id="@+id/PlayVideo_Setting"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="10dp"
+        android:src="@mipmap/playmusic_setting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/PlayVideo_Back"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:src="@mipmap/musicappback"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/PlayVideo_Like"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:src="@mipmap/like_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PlayVideo_Media" />
+
+    <ImageView
+        android:id="@+id/PlayVideo_Share"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/playmusic_share"
+        app:layout_constraintEnd_toEndOf="@+id/PlayVideo_Chat"
+        app:layout_constraintTop_toBottomOf="@+id/PlayVideo_ChatTotal" />
+
+    <ImageView
+        android:id="@+id/PlayVideo_Chat"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/playmusic_chat"
+        app:layout_constraintEnd_toEndOf="@+id/PlayVideo_Like"
+        app:layout_constraintTop_toBottomOf="@+id/PlayVideo_LikeTotal" />
+
+    <TextView
+        android:id="@+id/PlayVideo_LikeTotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:gravity="center_horizontal"
+        android:text="155"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/PlayVideo_Like"
+        app:layout_constraintTop_toBottomOf="@+id/PlayVideo_Like" />
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/PlayVideo_ChatTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="10"
+        app:layout_constraintEnd_toEndOf="@+id/PlayVideo_Chat"
+        app:layout_constraintTop_toBottomOf="@+id/PlayVideo_Chat" />
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/PlayVideo_ShareTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="37"
+        app:layout_constraintEnd_toEndOf="@+id/PlayVideo_Share"
+        app:layout_constraintTop_toBottomOf="@+id/PlayVideo_Share" />
+
+    <ImageView
+        android:id="@+id/PlayVideo_Keep"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/keep_white"
+        app:layout_constraintEnd_toEndOf="@+id/PlayVideo_Share"
+        app:layout_constraintTop_toBottomOf="@+id/PlayVideo_ShareTotal" />
+
+    <ImageView
+        android:id="@+id/PlayVideo_Img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/PlayVideo_Share"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/PlayVideo_Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Dest1nyW"
+        app:layout_constraintStart_toEndOf="@+id/PlayVideo_Img"
+        app:layout_constraintTop_toTopOf="@+id/PlayVideo_Img" />
+
+    <TextView
+        android:id="@+id/PlayVideo_Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="林俊杰《最好是》官方MV"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/PlayVideo_Keep"
+        app:layout_constraintEnd_toStartOf="@+id/PlayVideo_Keep"
+        app:layout_constraintStart_toStartOf="@+id/PlayVideo_Img" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

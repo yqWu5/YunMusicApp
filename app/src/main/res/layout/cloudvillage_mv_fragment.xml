@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+    android:id="@+id/CloudVillage_Mv"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:overScrollMode="never"
+        android:id="@+id/CloudVillage_Mv_Recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
+</com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>

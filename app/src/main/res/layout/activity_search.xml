@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".SearchActivity">
+
+    <ImageView
+        android:id="@+id/Search_Back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/userinfo_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/Search_Search"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="10dp"
+        android:src="@mipmap/search_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Search_Back" />
+
+    <EditText
+        android:theme="@style/EditTextSearch"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textCursorDrawable="@color/black"
+        android:textColor="@color/black"
+        android:lines="1"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:id="@+id/Search_Edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/Search_Search"
+        app:layout_constraintStart_toEndOf="@+id/Search_Back"
+        app:layout_constraintTop_toTopOf="@+id/Search_Back">
+    </EditText>
+
+    <TextView
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:id="@+id/textView72"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="热歌榜"
+        app:layout_constraintStart_toStartOf="@+id/Search_Back"
+        app:layout_constraintTop_toBottomOf="@+id/Search_Edit" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="@+id/Search_Search"
+        app:layout_constraintStart_toStartOf="@+id/textView72"
+        app:layout_constraintTop_toBottomOf="@+id/textView72">
+
+    </View>
+
+    <ImageView
+        android:id="@+id/imageView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@mipmap/search_classic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:src="@mipmap/search_child"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView36"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:src="@mipmap/search_rap"
+        app:layout_constraintBottom_toTopOf="@+id/imageView36"
+        app:layout_constraintStart_toStartOf="@+id/imageView36" />
+
+    <ImageView
+        android:id="@+id/imageView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:src="@mipmap/search_rock"
+        app:layout_constraintBottom_toTopOf="@+id/imageView37"
+        app:layout_constraintEnd_toEndOf="@+id/imageView37" />
+
+    <ImageView
+        android:id="@+id/Search_Singer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:src="@mipmap/search_singer"
+        app:layout_constraintBottom_toTopOf="@+id/imageView39"
+        app:layout_constraintStart_toStartOf="@+id/imageView39" />
+
+    <ImageView
+        android:id="@+id/imageView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:src="@mipmap/search_electmusic"
+        app:layout_constraintBottom_toTopOf="@+id/imageView42"
+        app:layout_constraintEnd_toEndOf="@+id/imageView42" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Search_Recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/Search_Singer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view6" />
+</androidx.constraintlayout.widget.ConstraintLayout>

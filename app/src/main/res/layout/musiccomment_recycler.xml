@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/MusicComment_Recycler_Img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:id="@+id/MusicComment_Recycler_SongName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="可以了"
+        app:layout_constraintBottom_toBottomOf="@+id/MusicComment_Recycler_Img"
+        app:layout_constraintStart_toEndOf="@+id/MusicComment_Recycler_Img"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/MusicComment_Recycler_SingerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="陈奕迅"
+        app:layout_constraintBottom_toBottomOf="@+id/MusicComment_Recycler_Img"
+        app:layout_constraintStart_toStartOf="@+id/MusicComment_Recycler_SongName"
+        app:layout_constraintTop_toTopOf="@+id/MusicComment_Recycler_Img" />
+
+    <View
+        android:id="@+id/view7"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MusicComment_Recycler_Img">
+    </View>
+
+    <TextView
+        android:id="@+id/textView78"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="评论区"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/MusicComment_Recycler_TabLayout"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="120dp"
+        android:background="#00000000"
+        android:theme="@style/Theme.AppCompat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView78"
+        app:layout_constraintTop_toBottomOf="@+id/view7"
+        app:tabIndicator="@drawable/layer_tab_indicator_large"
+        app:tabIndicatorColor="#FF0000"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorHeight="4dp"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextColor="@color/black" />
+
+    <com.example.yunmusicapp.mineView.VerticalScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView78">
+
+        <com.example.yunmusicapp.mineView.VerticalViewPager
+            android:id="@+id/MusicComment_Recycler_ViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.example.yunmusicapp.mineView.VerticalScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

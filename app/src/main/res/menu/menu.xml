@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/openmenu"
+        android:icon="@mipmap/ic_launcher"
+        android:title="QQ登录"
+        app:showAsAction="ifRoom" />//
+    <item
+        android:id="@+id/action_tianqi"
+        android:orderInCategory="100"
+        android:title="天气"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_lixian"
+        android:orderInCategory="100"
+        android:title="离线"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_yejian"
+        android:orderInCategory="100"
+        android:title="日夜间"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_sousuo"
+        android:orderInCategory="100"
+        android:title="搜索"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_saoyisao"
+        android:orderInCategory="100"
+        android:title="扫一扫"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_shezhi"
+        android:orderInCategory="100"
+        android:title="设置"
+        app:showAsAction="never" />
+</menu>

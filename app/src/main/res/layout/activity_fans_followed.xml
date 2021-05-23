@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FansFollowedActivity">
+
+    <ImageView
+        android:id="@+id/FansFollowed_Back"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/userinfo_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/FansFollowed_Search"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:src="@mipmap/search_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/FansFollowed_TabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="5dp"
+        android:background="#00000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FansFollowed_Back"
+        app:tabIndicator="@drawable/layer_tab_indicator_large"
+        app:tabIndicatorColor="#FF0000"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicatorHeight="4dp"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabSelectedTextColor="@color/black" />
+
+<!--    <com.example.yunmusicapp.mineView.VerticalScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/FansFollowed_TabLayout">-->
+
+<!--        <com.example.yunmusicapp.mineView.VerticalViewPager-->
+<!--            android:id="@+id/FansFollowed_ViewPager"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp">-->
+<!--        </com.example.yunmusicapp.mineView.VerticalViewPager>-->
+<!--    </com.example.yunmusicapp.mineView.VerticalScrollView>-->
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/FansFollowed_ViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FansFollowed_TabLayout">
+    </androidx.viewpager.widget.ViewPager>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
